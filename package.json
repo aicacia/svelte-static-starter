@@ -1,0 +1,58 @@
+{
+	"name": "@aicacia/static-starter",
+	"version": "0.1.0",
+	"type": "module",
+	"scripts": {
+		"tauri": "tauri",
+		"vite": "vite",
+		"start": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"desktop": "tauri dev",
+		"desktop.build": "tauri build",
+		"test": "playwright test",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test:unit": "vitest",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"engine": {
+		"node": ">=18"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "2",
+		"@sveltejs/kit": "1",
+		"@tauri-apps/api": "2.0.0-alpha.5",
+		"@tauri-apps/cli": "2.0.0-alpha.10",
+		"@types/postcss-import": "14",
+		"@typescript-eslint/eslint-plugin": "5",
+		"@typescript-eslint/parser": "5",
+		"autoprefixer": "10",
+		"eslint": "8",
+		"eslint-config-prettier": "8",
+		"eslint-plugin-svelte3": "4",
+		"internal-ip": "8",
+		"postcss": "8",
+		"postcss-import": "15",
+		"postcss-nesting": "11",
+		"prettier": "2",
+		"prettier-plugin-svelte": "2",
+		"svelte": "3",
+		"svelte-check": "3",
+		"svelte-preprocess": "5",
+		"tailwindcss": "3",
+		"tslib": "2",
+		"typescript": "5",
+		"vite": "4"
+	},
+	"dependencies": {
+		"@aicacia/hash": "0",
+		"@aicacia/rand": "0",
+		"@svelte-put/clickoutside": "2",
+		"eventemitter3": "5",
+		"svelte-localstorage-writable": "0",
+		"svelte-portal": "2",
+		"vest": "4"
+	}
+}

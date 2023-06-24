@@ -1,0 +1,32 @@
+[package]
+name = "aicacia_static_starter"
+version = "0.1.0"
+description = "Aicacia Static Starter"
+authors = ["nathanfaucett@gmail.com"]
+license = ""
+repository = ""
+default-run = "aicacia_static_starter"
+edition = "2021"
+rust-version = "1.70"
+
+[lib]
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.0.0-alpha.6", features = [] }
+
+[dependencies]
+serde_json = "1"
+serde = { version = "1", features = ["derive"] }
+tauri = { version = "2.0.0-alpha.10", features = [] }
+
+[features]
+default = [ "custom-protocol" ]
+custom-protocol = [ "tauri/custom-protocol" ]
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true
