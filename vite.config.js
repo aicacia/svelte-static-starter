@@ -1,3 +1,4 @@
+import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 // import { internalIpV4 } from 'internal-ip';
 
@@ -16,7 +17,8 @@ export default defineConfig(async () => {
 				// host,
 				port: 5183
 			}
-		}
+		},
+		plugins: [sveltekit()]
 	};
 
 	return config;
