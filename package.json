@@ -51,6 +51,7 @@
 		"@aicacia/rand": "0",
 		"@svelte-put/clickoutside": "2",
 		"eventemitter3": "5",
+		"lucide-svelte": "0",
 		"svelte-localstorage-writable": "0",
 		"svelte-portal": "2",
 		"vest": "4"

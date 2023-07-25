@@ -12,14 +12,14 @@
 </script>
 
 <div
-	class="as-flex as-items-center as-py-2 as-px-3 as-m-1 as-cursor-pointer as-shadow"
-	class:as-bg-green-500={notification.type === 'success'}
-	class:as-bg-red-500={notification.type === 'error'}
-	class:as-bg-blue-500={notification.type === 'info'}
-	class:as-bg-yellow-500={notification.type === 'warning'}
+	class="flex items-center py-2 px-3 m-1 cursor-pointer shadow"
+	class:bg-green-500={notification.type === 'success'}
+	class:bg-red-500={notification.type === 'error'}
+	class:bg-blue-500={notification.type === 'info'}
+	class:bg-yellow-500={notification.type === 'warning'}
 	on:click={onDelete}
 >
-	<div class="as-w-6 as-h-6 as-mr-2 as-text-white">
+	<div class="w-6 h-6 mr-2 text-white">
 		{#if notification.type === 'error'}
 			<XCircle />
 		{:else if notification.type === 'success'}
@@ -30,5 +30,5 @@
 			<AlertTriangle />
 		{/if}
 	</div>
-	<div class="as-text-white as-max-w-xs">{notification.message}</div>
+	<div class="text-white max-w-xs">{notification.message}</div>
 </div>

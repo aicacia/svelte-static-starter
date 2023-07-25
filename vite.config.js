@@ -1,10 +1,10 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
-// import { internalIpV4 } from 'internal-ip';
+import { internalIpV4 } from 'internal-ip';
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => {
-	// const host = await internalIpV4();
+	const host = await internalIpV4();
 
 	/** @type {import('vite').UserConfig} */
 	const config = {
@@ -14,7 +14,7 @@ export default defineConfig(async () => {
 			strictPort: true,
 			hmr: {
 				protocol: 'ws',
-				// host,
+				host,
 				port: 5183
 			}
 		},
